@@ -398,9 +398,9 @@ dependencies = [
 
 [[package]]
 name = "bindgen"
-version = "0.60.1"
+version = "0.59.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "062dddbc1ba4aca46de6338e2bf87771414c335f7b2f2036e8f3e9befebf88e6"
+checksum = "453c49e5950bb0eb63bb3df640e31618846c89d5b7faa54040d76e98e0134375"
 dependencies = [
  "bitflags",
  "cexpr",
@@ -727,17 +727,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bzip2-sys"
-version = "0.1.11+1.0.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "736a955f3fa7875102d57c82b8cac37ec45224a07fd32d58f9f7a186b6cd4cdc"
-dependencies = [
- "cc",
- "libc",
- "pkg-config",
-]
-
-[[package]]
 name = "c_linked_list"
 version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -801,9 +790,9 @@ dependencies = [
 
 [[package]]
 name = "cexpr"
-version = "0.6.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6fac387a98bb7c37292057cffc56d62ecb629900026402633ae9160df93a8766"
+checksum = "db507a7679252d2276ed0dd8113c6875ec56d3089f9225b2b42c30cc1f8e5c89"
 dependencies = [
  "nom",
 ]
@@ -883,9 +872,9 @@ dependencies = [
 
 [[package]]
 name = "clang-sys"
-version = "1.3.3"
+version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a050e2153c5be08febd6734e29298e844fdb0fa21aeddd63b4eb7baa106c69b"
+checksum = "81cf2cc85830eae84823884db23c5306442a6c3d5bfd3beb2f2a2c829faa1816"
 dependencies = [
  "glob",
  "libc",
@@ -2701,6 +2690,7 @@ dependencies = [
  "Inflector",
  "anyhow",
  "backtrace",
+ "bitvec",
  "block-buffer 0.9.0",
  "bstr",
  "byteorder",
@@ -4527,9 +4517,9 @@ dependencies = [
 
 [[package]]
 name = "libloading"
-version = "0.7.3"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "efbc0f03f9a775e9f6aed295c6a1ba2253c5757a9e03d55c6caa46a681abcddd"
+checksum = "6f84d96438c15fcd6c3f244c8fce01d1e2b9c6b5623e9c711dc9286d8fc92d6a"
 dependencies = [
  "cfg-if 1.0.0",
  "winapi 0.3.9",
@@ -4537,27 +4527,14 @@ dependencies = [
 
 [[package]]
 name = "librocksdb-sys"
-version = "0.8.0+7.4.4"
+version = "6.20.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "611804e4666a25136fcc5f8cf425ab4d26c7f74ea245ffe92ea23b85b6420b5d"
+checksum = "c309a9d2470844aceb9a4a098cf5286154d20596868b75a6b36357d2bb9ca25d"
 dependencies = [
  "bindgen",
- "bzip2-sys",
  "cc",
  "glob",
  "libc",
- "libz-sys",
-]
-
-[[package]]
-name = "libz-sys"
-version = "1.1.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9702761c3935f8cc2f101793272e202c72b99da8f4224a19ddcf1279a6450bbf"
-dependencies = [
- "cc",
- "pkg-config",
- "vcpkg",
 ]
 
 [[package]]
@@ -4659,12 +4636,6 @@ dependencies = [
  "mime",
  "unicase",
 ]
-
-[[package]]
-name = "minimal-lexical"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a"
 
 [[package]]
 name = "miniz_oxide"
@@ -5432,12 +5403,14 @@ dependencies = [
 
 [[package]]
 name = "nom"
-version = "7.1.1"
+version = "6.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8903e5a29a317527874d0402f867152a3d21c908bb0b933e416c65e301d4c36"
+checksum = "e7413f999671bd4745a7b624bd370a569fb6bc574b23c83a3c5ed2e453f3d5e2"
 dependencies = [
+ "bitvec",
+ "funty",
  "memchr",
- "minimal-lexical",
+ "version_check",
 ]
 
 [[package]]
@@ -6640,9 +6613,9 @@ dependencies = [
 
 [[package]]
 name = "rocksdb"
-version = "0.19.0"
+version = "0.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7e9562ea1d70c0cc63a34a22d977753b50cca91cc6b6527750463bd5dd8697bc"
+checksum = "7a62eca5cacf2c8261128631bed9f045598d40bfbe4b29f5163f0f802f8f44a7"
 dependencies = [
  "libc",
  "librocksdb-sys",
